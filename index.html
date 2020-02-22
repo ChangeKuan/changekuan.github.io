@@ -314,7 +314,7 @@
 <h1 id="6-static关键字的作用"><a href="#6-static关键字的作用" class="headerlink" title="6.static关键字的作用"></a>6.static关键字的作用</h1><p>修饰局部变量：使得变量变成静态变量，生命周期与程序相同。<br>修饰全局变量：使得只能被包含该定义的文件访问。<br>修饰函数：使得只能被包含该定义的文件访问。<br>修饰成员变量：会被类的所有对象共享。<br><strong>涉及到静态就往共享方面去想</strong></p>
 <h1 id="7-define和const的区别"><a href="#7-define和const的区别" class="headerlink" title="7.#define和const的区别"></a>7.#define和const的区别</h1><p>定义常量的时候：#define 只是一个立即数，没有类型<br>#define 不能用指针去指向它<br>#define 还可以用来定义简单的函数</p>
 <h1 id="8-malloc和new的区别"><a href="#8-malloc和new的区别" class="headerlink" title="8.malloc和new的区别"></a>8.malloc和new的区别</h1><p>Malloc（配套free）是库函数，它的完整作用只对内部类型数据有用。对于非内部类型对象来说，创建的时候自动执行构造函数，消亡的时候自动执行析构函数。<br>New 是运算符，完成内存分配和初始化的工作。</p>
-<h1 id="9-共同体"><a href="#9-共同体" class="headerlink" title="9.共同体"></a>9.共同体</h1><p>意思就是一群人共用一段内存，但不同时存在<br>12.结构体默认public，类默认private</p>
+<h1 id="9-共同体"><a href="#9-共同体" class="headerlink" title="9.共同体"></a>9.共同体</h1><p>意思就是一群人共用一段内存，但不同时存在</p>
 <h1 id="10-delete和delete-的区别"><a href="#10-delete和delete-的区别" class="headerlink" title="10.delete和delete[]的区别"></a>10.delete和delete[]的区别</h1><p>delete只会调用一次析构函数，而delete[]会调用每个成员的析构函数<br>用new分配的内存用delete释放，用new[]分配的内存用delete[]释放</p>
 <h1 id="11-堆和栈的区别"><a href="#11-堆和栈的区别" class="headerlink" title="11.堆和栈的区别"></a>11.堆和栈的区别</h1><p>一个由C/C++编译的程序占用的内存分为以下几个部分</p>
 <h2 id="栈区（stack）"><a href="#栈区（stack）" class="headerlink" title="栈区（stack）"></a>栈区（stack）</h2><p>由编译器自动分配释放 ，存放函数的参数值，局部变量的值等。其操作方式类似于数据结构中的栈。</p>
@@ -332,15 +332,16 @@
 <p>String::String(const char * str){<br>    If(str == NULL){<br>        M_data = new char[1];<br>M_data = ‘\0’;</p>
 <p>}<br>    Int length =<br>M_data = new char [l+1]</p>
 <p>Strcpy();<br>}</p>
-<h1 id="19-STL（必问）"><a href="#19-STL（必问）" class="headerlink" title="19.STL（必问）"></a>19.STL（必问）</h1><p>STL标准模板库，是一些容器的集合。容器、算法、迭代器</p>
+<h1 id="19-结构体和类"><a href="#19-结构体和类" class="headerlink" title="19.结构体和类"></a>19.结构体和类</h1><p>结构体默认public，类默认private</p>
+<h1 id="20-STL（必问）"><a href="#20-STL（必问）" class="headerlink" title="20.STL（必问）"></a>20.STL（必问）</h1><p>STL标准模板库，是一些容器的集合。容器、算法、迭代器</p>
 <h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><p>序列式容器：vector，list，queue，stack，heap<br>关联式容器：平衡二叉树。Map，set，hashtable，hash_set</p>
 <h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p>排序，复制，各容器的算法。</p>
 <h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><p>按顺序访问各个元素而无需暴露容器的内部结构。</p>
-<h1 id="20-map和set-的底层原理"><a href="#20-map和set-的底层原理" class="headerlink" title="20.map和set 的底层原理"></a>20.map和set 的底层原理</h1><p>原理是红黑树。<br>根节点和叶节点（NULL）是黑色。红色节点的子必须是黑色。节点到自己子孙节点包含相同的黑色节点。决定了没有一条路径会比其他路径长出两倍。接近平衡。</p>
 <h1 id="21-vector原理"><a href="#21-vector原理" class="headerlink" title="21.vector原理"></a>21.vector原理</h1><p>动态增长，先指向一片连续空间。装不下的时候就申请更大的一片空间，然后将内容复制过去，原来的释放。</p>
 <h1 id="22-unordered-map和map的区别"><a href="#22-unordered-map和map的区别" class="headerlink" title="22. unordered_map和map的区别"></a>22. unordered_map和map的区别</h1><p>一个底层是用红黑树来实现，一个是哈希表</p>
 <h1 id="23-list"><a href="#23-list" class="headerlink" title="23.list"></a>23.list</h1><p>链表，空间上不连续。如果需要大量插入和删除的时候使用它。</p>
-<h1 id="24-STL的原理和使用"><a href="#24-STL的原理和使用" class="headerlink" title="24.STL的原理和使用"></a>24.STL的原理和使用</h1><p>有些杂乱，是一些用法和原理的说明，看看就好。主要还是要自己把常用的找时间自己去学一学</p>
+<h1 id="24-map和set-的底层原理"><a href="#24-map和set-的底层原理" class="headerlink" title="24.map和set 的底层原理"></a>24.map和set 的底层原理</h1><p>原理是红黑树。<br>根节点和叶节点（NULL）是黑色。红色节点的子必须是黑色。节点到自己子孙节点包含相同的黑色节点。决定了没有一条路径会比其他路径长出两倍。接近平衡。</p>
+<h1 id="25-STL的原理和使用"><a href="#25-STL的原理和使用" class="headerlink" title="25.STL的原理和使用"></a>25.STL的原理和使用</h1><p>有些杂乱，是一些用法和原理的说明，看看就好。主要还是要自己把常用的找时间自己去学一学</p>
 <p>Sort（a，a+7）<br>迭代器说白了就是指针</p>
 <p><strong>String：对char的封装</strong><br>String s;<br>Cout&lt;&lt;s；</p>
 <p>获取一行：getline（）；</p>
