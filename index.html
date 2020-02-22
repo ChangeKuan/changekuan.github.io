@@ -328,11 +328,11 @@
 <h1 id="15-构造函数"><a href="#15-构造函数" class="headerlink" title="15.构造函数"></a>15.构造函数</h1><p>如果析构函数不被声明成虚函数，则编译器实施静态绑定，在删除指向派生类的基类指针时，只会调用基类的析构函数而不调用派生类析构函数，这样就会造成派生类对象析构不完全。<br>若构造函数声明为虚函数，那么由于对象还未创建，还没有内存空间，更没有虚函数表地址用来调用虚函数即构造函数了。</p>
 <h1 id="16-虚函数"><a href="#16-虚函数" class="headerlink" title="16.虚函数"></a>16.虚函数</h1><p>如果想要用基类对非继承成员进行操作，则要把基类的这个操作（函数）定义为虚函数。那么，析构函数自然也应该如此：如果它想析构子类中的重新定义或新的成员及对象，当然也应该声明为虚的。</p>
 <h1 id="17-静态类型和动态类型"><a href="#17-静态类型和动态类型" class="headerlink" title="17.静态类型和动态类型"></a>17.静态类型和动态类型</h1><p>静态类型：对象在声明时候确定的类型，编译的时候确定。<br>动态类型：当前对象所指的类型，在运行时候确定。</p>
-<h1 id="18-请你写一个string类"><a href="#18-请你写一个string类" class="headerlink" title="18.请你写一个string类"></a>18.请你写一个string类</h1><p>Class string{<br>    Public:<br>        String(const char<em>str = NULL);<br>        ~String(){};<br>        String(const String&amp;other);<br>        String &amp;operator = (const String &amp;other);<br>    Private:<br>        Char</em>m_data;<br>}</p>
+<h1 id="18-请你写一个string类"><a href="#18-请你写一个string类" class="headerlink" title="18.请你写一个string类"></a>18.请你写一个string类</h1><p>Class string{<br>    Public:<br>        String(const char* str = NULL);<br>        ~String(){};<br>        String(const String &amp; other);<br>        String &amp; operator = (const String &amp;other);<br>    Private:<br>        Char * m_data;<br>}</p>
 <p>String::String(const char * str){<br>    If(str == NULL){<br>        M_data = new char[1];<br>M_data = ‘\0’;</p>
 <p>}<br>    Int length =<br>M_data = new char [l+1]</p>
-<p>Strcoy();<br>}</p>
-<h1 id="19-STL"><a href="#19-STL" class="headerlink" title="19.STL"></a>19.STL</h1><p>STL标准模板库，是一些容器的集合。容器、算法、迭代器</p>
+<p>Strcpy();<br>}</p>
+<h1 id="19-STL（必问）"><a href="#19-STL（必问）" class="headerlink" title="19.STL（必问）"></a>19.STL（必问）</h1><p>STL标准模板库，是一些容器的集合。容器、算法、迭代器</p>
 <h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><p>序列式容器：vector，list，queue，stack，heap<br>关联式容器：平衡二叉树。Map，set，hashtable，hash_set</p>
 <h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p>排序，复制，各容器的算法。</p>
 <h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><p>按顺序访问各个元素而无需暴露容器的内部结构。</p>
