@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>面试技巧</title>
-    <url>/2020/02/23/%E9%9D%A2%E8%AF%95%E6%8A%80%E5%B7%A7/</url>
+    <url>/changekuan.github.io/2020/02/23/%E9%9D%A2%E8%AF%95%E6%8A%80%E5%B7%A7/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>技巧</category>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <title>C/C++面试题汇总</title>
-    <url>/2020/02/22/C-C-%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/</url>
+    <url>/changekuan.github.io/2020/02/22/C-C-%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/</url>
     <content><![CDATA[<h1 id="1-C和C-的区别"><a href="#1-C和C-的区别" class="headerlink" title="1. C和C++的区别"></a>1. C和C++的区别</h1><h2 id="C-是面向对象的语言"><a href="#C-是面向对象的语言" class="headerlink" title="C++是面向对象的语言"></a>C++是面向对象的语言</h2><p>构造一个符合问题的对象模型。最主要特点是“封装，继承，多态”，隐藏细节，拓展存在的模块，实现接口复用。</p>
 <h2 id="动态管理内存方法不一样"><a href="#动态管理内存方法不一样" class="headerlink" title="动态管理内存方法不一样"></a>动态管理内存方法不一样</h2><p>C使用malloc/free，C++还有new/delete。</p>
 <h2 id="另外"><a href="#另外" class="headerlink" title="另外"></a>另外</h2><p>C++支持重载，引用。</p>
@@ -77,7 +77,7 @@
   </entry>
   <entry>
     <title>如何复习申论</title>
-    <url>/2020/02/22/%E5%A6%82%E4%BD%95%E5%A4%8D%E4%B9%A0%E7%94%B3%E8%AE%BA/</url>
+    <url>/changekuan.github.io/2020/02/22/%E5%A6%82%E4%BD%95%E5%A4%8D%E4%B9%A0%E7%94%B3%E8%AE%BA/</url>
     <content><![CDATA[<h1 id="总述"><a href="#总述" class="headerlink" title="总述"></a>总述</h1><p>首先听完理论课，然后针对性练习，比如极致真题。做完这些题目之后，再回去听课或者看看申论的规矩。我时不时要积累，积累的过程当中可以日常多学习新闻文章的标题，记记近期发生的事情。<br><strong>误区一：把听懂当成学会。</strong><br><strong>误区二：把不会做题当成没听懂。</strong></p>
 <h1 id="申论考什么？申论怎么做题？"><a href="#申论考什么？申论怎么做题？" class="headerlink" title="申论考什么？申论怎么做题？"></a>申论考什么？申论怎么做题？</h1><h2 id="阅读理解能力"><a href="#阅读理解能力" class="headerlink" title="阅读理解能力"></a>阅读理解能力</h2><p>抄材料（占百分之三十到百分之四十），提炼材料意思（占百分之三十到百分之四十）。找问题，深入找问题，找原因。</p>
 <h2 id="综合分析能力"><a href="#综合分析能力" class="headerlink" title="综合分析能力"></a>综合分析能力</h2><p>对材料进行分析和归纳，总结。多角度思考问题，合理推断。要素之间进行推导推断。对策根据材料中的问题来对应解决。</p>
@@ -104,7 +104,7 @@
   </entry>
   <entry>
     <title>个人发展战略</title>
-    <url>/2020/02/21/%E4%B8%AA%E4%BA%BA%E5%8F%91%E5%B1%95%E6%88%98%E7%95%A5/</url>
+    <url>/changekuan.github.io/2020/02/21/%E4%B8%AA%E4%BA%BA%E5%8F%91%E5%B1%95%E6%88%98%E7%95%A5/</url>
     <content><![CDATA[<h1 id="一、一个模型，帮你找到真正热爱的工作"><a href="#一、一个模型，帮你找到真正热爱的工作" class="headerlink" title="一、一个模型，帮你找到真正热爱的工作"></a>一、一个模型，帮你找到真正热爱的工作</h1><h2 id="1、冰山模型"><a href="#1、冰山模型" class="headerlink" title="1、冰山模型"></a>1、冰山模型</h2><p><img src="http://q61tkpb4n.bkt.clouddn.com/%E5%86%B0%E5%B1%B1%E6%A8%A1%E5%9E%8B.jpg" alt=""></p>
 <p>你和一个岗位是否匹配、匹配程度如何、市场薪资值多少，都可以用这个模型来解释。</p>
 <h3 id="（1）知识和技能"><a href="#（1）知识和技能" class="headerlink" title="（1）知识和技能"></a>（1）知识和技能</h3><p>一个人的知识和技能（某项专门的技术）是可以通过后天习得的，也是非常显性，很容易看出来的。<br><strong>如果你的工作中有很多陌生的内容，觉得信息量巨大，来不及接受，感到焦虑和慌乱，那么很可能你的知识技能跟岗位不匹配</strong>，但这不是什么大问题，很容易补齐，努努力，一段时间就能提升。</p>
@@ -142,7 +142,7 @@
   </entry>
   <entry>
     <title>纪念</title>
-    <url>/2020/02/21/%E7%BA%AA%E5%BF%B5/</url>
+    <url>/changekuan.github.io/2020/02/21/%E7%BA%AA%E5%BF%B5/</url>
     <content><![CDATA[<h1 id="它的出生日"><a href="#它的出生日" class="headerlink" title="它的出生日"></a>它的出生日</h1><p>今天是我第一次完成个人网页的搭建的日子，很兴奋。<br>其实好像也没有想象的那么难。<br>还有就是，斥巨资买了一年的 <a href="changekuan.top"></a> 的使用权，有钱真好</p>
 <h1 id="出现的问题"><a href="#出现的问题" class="headerlink" title="出现的问题"></a>出现的问题</h1><p>没想到配置文件里面，“空格”也很重要，一定不能漏掉，就因为我忘记打空格了，导致我找了一下午的问题所在。官方为啥不告诉我呢。</p>
 ]]></content>
