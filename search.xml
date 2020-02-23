@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>面试技巧</title>
+    <url>/changekuan.github.io/2020/02/23/%E9%9D%A2%E8%AF%95%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>C/C++面试题汇总</title>
     <url>/changekuan.github.io/2020/02/22/C-C-%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/</url>
     <content><![CDATA[<h1 id="1-C和C-的区别"><a href="#1-C和C-的区别" class="headerlink" title="1. C和C++的区别"></a>1. C和C++的区别</h1><h2 id="C-是面向对象的语言"><a href="#C-是面向对象的语言" class="headerlink" title="C++是面向对象的语言"></a>C++是面向对象的语言</h2><p>构造一个符合问题的对象模型。最主要特点是“封装，继承，多态”，隐藏细节，拓展存在的模块，实现接口复用。</p>
