@@ -25,46 +25,46 @@
   <entry>
     <title>C/C++面试题汇总</title>
     <url>/changekuan.github.io/2020/02/22/C-C-%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/</url>
-    <content><![CDATA[<h1 id="1-C和C-的区别"><a href="#1-C和C-的区别" class="headerlink" title="1. C和C++的区别"></a>1. C和C++的区别</h1><h2 id="C-是面向对象的语言"><a href="#C-是面向对象的语言" class="headerlink" title="C++是面向对象的语言"></a>C++是面向对象的语言</h2><p>构造一个符合问题的对象模型。最主要特点是“封装，继承，多态”，隐藏细节，拓展存在的模块，实现接口复用。</p>
+    <content><![CDATA[<h1 id="C和C-的区别"><a href="#C和C-的区别" class="headerlink" title="C和C++的区别"></a>C和C++的区别</h1><h2 id="C-是面向对象的语言"><a href="#C-是面向对象的语言" class="headerlink" title="C++是面向对象的语言"></a>C++是面向对象的语言</h2><p>构造一个符合问题的对象模型。最主要特点是“封装，继承，多态”，隐藏细节，拓展存在的模块，实现接口复用。</p>
 <h2 id="动态管理内存方法不一样"><a href="#动态管理内存方法不一样" class="headerlink" title="动态管理内存方法不一样"></a>动态管理内存方法不一样</h2><p>C使用malloc/free，C++还有new/delete。</p>
 <h2 id="另外"><a href="#另外" class="headerlink" title="另外"></a>另外</h2><p>C++支持重载，引用。</p>
 <p>选择C++的理由：C++更快（相较于java等），有像stl的类库（相较于C）</p>
 <p>关于C++输入输出：cin和cout比printf慢</p>
-<h1 id="2-面向对象和面向过程编程的区别"><a href="#2-面向对象和面向过程编程的区别" class="headerlink" title="2.面向对象和面向过程编程的区别"></a>2.面向对象和面向过程编程的区别</h1><p>面向过程：性能高，但是不好维护拓展<br>面向对象：反过来</p>
-<h1 id="3-文件编译执行的四个阶段"><a href="#3-文件编译执行的四个阶段" class="headerlink" title="3.文件编译执行的四个阶段"></a>3.文件编译执行的四个阶段</h1><p>预处理（），编译（汇编代码），汇编（机器指令），链接（exe）</p>
-<h1 id="4-变量的声明和定义"><a href="#4-变量的声明和定义" class="headerlink" title="4.变量的声明和定义"></a>4.变量的声明和定义</h1><p>声明：只是先告诉有这个东西，但是不分配内存</p>
-<h1 id="5-指针引用区别"><a href="#5-指针引用区别" class="headerlink" title="5.指针引用区别"></a>5.指针引用区别</h1><p>指针是一个存储另一个变量地址的新变量。<br>引用只是一个别名。引用必须在初始化的时候被赋值，不能为NULL。</p>
-<h1 id="6-static关键字的作用"><a href="#6-static关键字的作用" class="headerlink" title="6.static关键字的作用"></a>6.static关键字的作用</h1><p>修饰局部变量：使得变量变成静态变量，生命周期与程序相同。<br>修饰全局变量：使得只能被包含该定义的文件访问。<br>修饰函数：使得只能被包含该定义的文件访问。<br>修饰成员变量：会被类的所有对象共享。<br><strong>涉及到静态就往共享方面去想</strong></p>
-<h1 id="7-define和const的区别"><a href="#7-define和const的区别" class="headerlink" title="7.#define和const的区别"></a>7.#define和const的区别</h1><p>定义常量的时候：#define 只是一个立即数，没有类型<br>#define 不能用指针去指向它<br>#define 还可以用来定义简单的函数</p>
-<h1 id="8-malloc和new的区别"><a href="#8-malloc和new的区别" class="headerlink" title="8.malloc和new的区别"></a>8.malloc和new的区别</h1><p>Malloc（配套free）是库函数，它的完整作用只对内部类型数据有用。对于非内部类型对象来说，创建的时候自动执行构造函数，消亡的时候自动执行析构函数。<br>New 是运算符，完成内存分配和初始化的工作。</p>
-<h1 id="9-共同体"><a href="#9-共同体" class="headerlink" title="9.共同体"></a>9.共同体</h1><p>意思就是一群人共用一段内存，但不同时存在</p>
-<h1 id="10-delete和delete-的区别"><a href="#10-delete和delete-的区别" class="headerlink" title="10.delete和delete[]的区别"></a>10.delete和delete[]的区别</h1><p>delete只会调用一次析构函数，而delete[]会调用每个成员的析构函数<br>用new分配的内存用delete释放，用new[]分配的内存用delete[]释放</p>
-<h1 id="11-堆和栈的区别"><a href="#11-堆和栈的区别" class="headerlink" title="11.堆和栈的区别"></a>11.堆和栈的区别</h1><p>一个由C/C++编译的程序占用的内存分为以下几个部分</p>
+<h1 id="面向对象和面向过程编程的区别"><a href="#面向对象和面向过程编程的区别" class="headerlink" title="面向对象和面向过程编程的区别"></a>面向对象和面向过程编程的区别</h1><p>面向过程：性能高，但是不好维护拓展<br>面向对象：反过来</p>
+<h1 id="文件编译执行的四个阶段"><a href="#文件编译执行的四个阶段" class="headerlink" title="文件编译执行的四个阶段"></a>文件编译执行的四个阶段</h1><p>预处理（），编译（汇编代码），汇编（机器指令），链接（exe）</p>
+<h1 id="变量的声明和定义"><a href="#变量的声明和定义" class="headerlink" title="变量的声明和定义"></a>变量的声明和定义</h1><p>声明：只是先告诉有这个东西，但是不分配内存</p>
+<h1 id="指针引用区别"><a href="#指针引用区别" class="headerlink" title="指针引用区别"></a>指针引用区别</h1><p>指针是一个存储另一个变量地址的新变量。<br>引用只是一个别名。引用必须在初始化的时候被赋值，不能为NULL。</p>
+<h1 id="static关键字的作用"><a href="#static关键字的作用" class="headerlink" title="static关键字的作用"></a>static关键字的作用</h1><p>修饰局部变量：使得变量变成静态变量，生命周期与程序相同。<br>修饰全局变量：使得只能被包含该定义的文件访问。<br>修饰函数：使得只能被包含该定义的文件访问。<br>修饰成员变量：会被类的所有对象共享。<br><strong>涉及到静态就往共享方面去想</strong></p>
+<h1 id="define和const的区别"><a href="#define和const的区别" class="headerlink" title="#define和const的区别"></a>#define和const的区别</h1><p>定义常量的时候：#define 只是一个立即数，没有类型<br>#define 不能用指针去指向它<br>#define 还可以用来定义简单的函数</p>
+<h1 id="malloc和new的区别"><a href="#malloc和new的区别" class="headerlink" title="malloc和new的区别"></a>malloc和new的区别</h1><p>Malloc（配套free）是库函数，它的完整作用只对内部类型数据有用。对于非内部类型对象来说，创建的时候自动执行构造函数，消亡的时候自动执行析构函数。<br>New 是运算符，完成内存分配和初始化的工作。</p>
+<h1 id="共同体"><a href="#共同体" class="headerlink" title="共同体"></a>共同体</h1><p>意思就是一群人共用一段内存，但不同时存在</p>
+<h1 id="delete和delete-的区别"><a href="#delete和delete-的区别" class="headerlink" title="delete和delete[]的区别"></a>delete和delete[]的区别</h1><p>delete只会调用一次析构函数，而delete[]会调用每个成员的析构函数<br>用new分配的内存用delete释放，用new[]分配的内存用delete[]释放</p>
+<h1 id="堆和栈的区别"><a href="#堆和栈的区别" class="headerlink" title="堆和栈的区别"></a>堆和栈的区别</h1><p>一个由C/C++编译的程序占用的内存分为以下几个部分</p>
 <h2 id="栈区（stack）"><a href="#栈区（stack）" class="headerlink" title="栈区（stack）"></a>栈区（stack）</h2><p>由编译器自动分配释放 ，存放函数的参数值，局部变量的值等。其操作方式类似于数据结构中的栈。</p>
 <h2 id="堆区（heap）"><a href="#堆区（heap）" class="headerlink" title="堆区（heap）"></a>堆区（heap）</h2><p>一般由程序员分配释放， 若程序员不释放，程序结束时可能由OS回收 。<br><strong>注意它与数据结构中的堆是两回事，分配方式倒是类似于链表。</strong></p>
 <h2 id="全局区（静态区、static）"><a href="#全局区（静态区、static）" class="headerlink" title="全局区（静态区、static）"></a>全局区（静态区、static）</h2><p>全局变量和静态变量的存储是放在这一块的，初始化的全局变量和静态变量在一块区域， 未初始化的全局变量和未初始化的静态变量在相邻的另一块区域。程序结束后由系统释放</p>
 <h2 id="文字常量区"><a href="#文字常量区" class="headerlink" title="文字常量区"></a>文字常量区</h2><p>常量字符串就是放在这里的。 程序结束后由系统释放</p>
 <h2 id="程序代码区"><a href="#程序代码区" class="headerlink" title="程序代码区"></a>程序代码区</h2><p>存放函数体的二进制代码</p>
-<h1 id="12-关于内存对齐"><a href="#12-关于内存对齐" class="headerlink" title="12.关于内存对齐"></a>12.关于内存对齐</h1><p>性能要求，快。硬件限制，不能任意访问。</p>
-<h1 id="13-内存泄漏的原因"><a href="#13-内存泄漏的原因" class="headerlink" title="13.内存泄漏的原因"></a>13.内存泄漏的原因</h1><p>动态分配的堆内存没有释放，造成系统内存浪费。<br>New和delete没有配套。<br>需要用Delete[]却只用了Delete</p>
-<h1 id="14-拷贝构造函数"><a href="#14-拷贝构造函数" class="headerlink" title="14.拷贝构造函数"></a>14.拷贝构造函数</h1><p>生成实例化对象用的普通构造函数，用一个对象去实例化一个新的对象用的是拷贝构造。</p>
-<h1 id="15-构造函数"><a href="#15-构造函数" class="headerlink" title="15.构造函数"></a>15.构造函数</h1><p>如果析构函数不被声明成虚函数，则编译器实施静态绑定，在删除指向派生类的基类指针时，只会调用基类的析构函数而不调用派生类析构函数，这样就会造成派生类对象析构不完全。<br>若构造函数声明为虚函数，那么由于对象还未创建，还没有内存空间，更没有虚函数表地址用来调用虚函数即构造函数了。</p>
-<h1 id="16-虚函数"><a href="#16-虚函数" class="headerlink" title="16.虚函数"></a>16.虚函数</h1><p>如果想要用基类对非继承成员进行操作，则要把基类的这个操作（函数）定义为虚函数。那么，析构函数自然也应该如此：如果它想析构子类中的重新定义或新的成员及对象，当然也应该声明为虚的。</p>
-<h1 id="17-静态类型和动态类型"><a href="#17-静态类型和动态类型" class="headerlink" title="17.静态类型和动态类型"></a>17.静态类型和动态类型</h1><p>静态类型：对象在声明时候确定的类型，编译的时候确定。<br>动态类型：当前对象所指的类型，在运行时候确定。</p>
-<h1 id="18-请你写一个string类"><a href="#18-请你写一个string类" class="headerlink" title="18.请你写一个string类"></a>18.请你写一个string类</h1><p>Class string{<br>    Public:<br>        String(const char* str = NULL);<br>        ~String(){};<br>        String(const String &amp; other);<br>        String &amp; operator = (const String &amp;other);<br>    Private:<br>        Char * m_data;<br>}</p>
+<h1 id="关于内存对齐"><a href="#关于内存对齐" class="headerlink" title="关于内存对齐"></a>关于内存对齐</h1><p>性能要求，快。硬件限制，不能任意访问。</p>
+<h1 id="内存泄漏的原因"><a href="#内存泄漏的原因" class="headerlink" title="内存泄漏的原因"></a>内存泄漏的原因</h1><p>动态分配的堆内存没有释放，造成系统内存浪费。<br>New和delete没有配套。<br>需要用Delete[]却只用了Delete</p>
+<h1 id="拷贝构造函数"><a href="#拷贝构造函数" class="headerlink" title="拷贝构造函数"></a>拷贝构造函数</h1><p>生成实例化对象用的普通构造函数，用一个对象去实例化一个新的对象用的是拷贝构造。</p>
+<h1 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h1><p>如果析构函数不被声明成虚函数，则编译器实施静态绑定，在删除指向派生类的基类指针时，只会调用基类的析构函数而不调用派生类析构函数，这样就会造成派生类对象析构不完全。<br>若构造函数声明为虚函数，那么由于对象还未创建，还没有内存空间，更没有虚函数表地址用来调用虚函数即构造函数了。</p>
+<h1 id="虚函数"><a href="#虚函数" class="headerlink" title="虚函数"></a>虚函数</h1><p>如果想要用基类对非继承成员进行操作，则要把基类的这个操作（函数）定义为虚函数。那么，析构函数自然也应该如此：如果它想析构子类中的重新定义或新的成员及对象，当然也应该声明为虚的。</p>
+<h1 id="静态类型和动态类型"><a href="#静态类型和动态类型" class="headerlink" title="静态类型和动态类型"></a>静态类型和动态类型</h1><p>静态类型：对象在声明时候确定的类型，编译的时候确定。<br>动态类型：当前对象所指的类型，在运行时候确定。</p>
+<h1 id="请你写一个string类"><a href="#请你写一个string类" class="headerlink" title="请你写一个string类"></a>请你写一个string类</h1><p>Class string{<br>    Public:<br>        String(const char* str = NULL);<br>        ~String(){};<br>        String(const String &amp; other);<br>        String &amp; operator = (const String &amp;other);<br>    Private:<br>        Char * m_data;<br>}</p>
 <p>String::String(const char * str){<br>    If(str == NULL){<br>        M_data = new char[1];<br>M_data = ‘\0’;</p>
 <p>}<br>    Int length =<br>M_data = new char [l+1]</p>
 <p>Strcpy();<br>}</p>
-<h1 id="19-结构体和类"><a href="#19-结构体和类" class="headerlink" title="19.结构体和类"></a>19.结构体和类</h1><p>结构体默认public，类默认private</p>
-<h1 id="20-STL（必问）"><a href="#20-STL（必问）" class="headerlink" title="20.STL（必问）"></a>20.STL（必问）</h1><p>STL标准模板库，是一些容器的集合。容器、算法、迭代器</p>
+<h1 id="结构体和类"><a href="#结构体和类" class="headerlink" title="结构体和类"></a>结构体和类</h1><p>结构体默认public，类默认private</p>
+<h1 id="STL（必问）"><a href="#STL（必问）" class="headerlink" title="STL（必问）"></a>STL（必问）</h1><p>STL标准模板库，是一些容器的集合。容器、算法、迭代器</p>
 <h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><p>序列式容器：vector，list，queue，stack，heap<br>关联式容器：平衡二叉树。Map，set，hashtable，hash_set</p>
 <h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p>排序，复制，各容器的算法。</p>
 <h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><p>按顺序访问各个元素而无需暴露容器的内部结构。</p>
-<h1 id="21-vector原理"><a href="#21-vector原理" class="headerlink" title="21.vector原理"></a>21.vector原理</h1><p>动态增长，先指向一片连续空间。装不下的时候就申请更大的一片空间，然后将内容复制过去，原来的释放。</p>
-<h1 id="22-unordered-map和map的区别"><a href="#22-unordered-map和map的区别" class="headerlink" title="22. unordered_map和map的区别"></a>22. unordered_map和map的区别</h1><p>一个底层是用红黑树来实现，一个是哈希表</p>
-<h1 id="23-list"><a href="#23-list" class="headerlink" title="23.list"></a>23.list</h1><p>链表，空间上不连续。如果需要大量插入和删除的时候使用它。</p>
-<h1 id="24-map和set-的底层原理"><a href="#24-map和set-的底层原理" class="headerlink" title="24.map和set 的底层原理"></a>24.map和set 的底层原理</h1><p>原理是红黑树。<br>根节点和叶节点（NULL）是黑色。红色节点的子必须是黑色。节点到自己子孙节点包含相同的黑色节点。决定了没有一条路径会比其他路径长出两倍。接近平衡。</p>
-<h1 id="25-STL的原理和使用"><a href="#25-STL的原理和使用" class="headerlink" title="25.STL的原理和使用"></a>25.STL的原理和使用</h1><p>有些杂乱，是一些用法和原理的说明，看看就好。主要还是要自己把常用的找时间自己去学一学</p>
+<h1 id="vector原理"><a href="#vector原理" class="headerlink" title="vector原理"></a>vector原理</h1><p>动态增长，先指向一片连续空间。装不下的时候就申请更大的一片空间，然后将内容复制过去，原来的释放。</p>
+<h1 id="unordered-map和map的区别"><a href="#unordered-map和map的区别" class="headerlink" title="unordered_map和map的区别"></a>unordered_map和map的区别</h1><p>一个底层是用红黑树来实现，一个是哈希表</p>
+<h1 id="list"><a href="#list" class="headerlink" title="list"></a>list</h1><p>链表，空间上不连续。如果需要大量插入和删除的时候使用它。</p>
+<h1 id="map和set-的底层原理"><a href="#map和set-的底层原理" class="headerlink" title="map和set 的底层原理"></a>map和set 的底层原理</h1><p>原理是红黑树。<br>根节点和叶节点（NULL）是黑色。红色节点的子必须是黑色。节点到自己子孙节点包含相同的黑色节点。决定了没有一条路径会比其他路径长出两倍。接近平衡。</p>
+<h1 id="STL的原理和使用"><a href="#STL的原理和使用" class="headerlink" title="STL的原理和使用"></a>STL的原理和使用</h1><p>有些杂乱，是一些用法和原理的说明，看看就好。主要还是要自己把常用的找时间自己去学一学</p>
 <p>Sort（a，a+7）<br>迭代器说白了就是指针</p>
 <p><strong>String：对char的封装</strong><br>String s;<br>Cout&lt;&lt;s；</p>
 <p>获取一行：getline（）；</p>
@@ -116,33 +116,33 @@
   <entry>
     <title>个人发展战略</title>
     <url>/changekuan.github.io/2020/02/21/%E4%B8%AA%E4%BA%BA%E5%8F%91%E5%B1%95%E6%88%98%E7%95%A5/</url>
-    <content><![CDATA[<h1 id="一、一个模型，帮你找到真正热爱的工作"><a href="#一、一个模型，帮你找到真正热爱的工作" class="headerlink" title="一、一个模型，帮你找到真正热爱的工作"></a>一、一个模型，帮你找到真正热爱的工作</h1><h2 id="1、冰山模型"><a href="#1、冰山模型" class="headerlink" title="1、冰山模型"></a>1、冰山模型</h2><p><img src="http://q61tkpb4n.bkt.clouddn.com/%E5%86%B0%E5%B1%B1%E6%A8%A1%E5%9E%8B.jpg" alt=""></p>
+    <content><![CDATA[<h1 id="一个模型，帮你找到真正热爱的工作"><a href="#一个模型，帮你找到真正热爱的工作" class="headerlink" title="一个模型，帮你找到真正热爱的工作"></a>一个模型，帮你找到真正热爱的工作</h1><h2 id="冰山模型"><a href="#冰山模型" class="headerlink" title="冰山模型"></a>冰山模型</h2><p><img src="http://q61tkpb4n.bkt.clouddn.com/%E5%86%B0%E5%B1%B1%E6%A8%A1%E5%9E%8B.jpg" alt=""></p>
 <p>你和一个岗位是否匹配、匹配程度如何、市场薪资值多少，都可以用这个模型来解释。</p>
-<h3 id="（1）知识和技能"><a href="#（1）知识和技能" class="headerlink" title="（1）知识和技能"></a>（1）知识和技能</h3><p>一个人的知识和技能（某项专门的技术）是可以通过后天习得的，也是非常显性，很容易看出来的。<br><strong>如果你的工作中有很多陌生的内容，觉得信息量巨大，来不及接受，感到焦虑和慌乱，那么很可能你的知识技能跟岗位不匹配</strong>，但这不是什么大问题，很容易补齐，努努力，一段时间就能提升。</p>
-<h3 id="（2）能力"><a href="#（2）能力" class="headerlink" title="（2）能力"></a>（2）能力</h3><p>能力，或者说通用能力，比如学习思考能力、人际交往能力等。<strong>知识和技能是属于特定领域，而能力则更多的是通用领域的，是可迁移的。</strong><br><strong>如果能力不匹配，在工作中就会体现为工作效率低，面对复杂问题无从下手，缺乏成就感，力不从心。</strong></p>
-<h3 id="（3）价值观、性格、动机"><a href="#（3）价值观、性格、动机" class="headerlink" title="（3）价值观、性格、动机"></a>（3）价值观、性格、动机</h3><p>这些要素在成年之后很难改变。<br><strong>如果你在工作中经常陷入矛盾和纠结，对所做的事情很难发自内内心地认同，很可能是价值观上不匹配。</strong><br><strong>如果你在工作中发现，自己好像没有很大的工作量，但是心很累，很有可能是性格不匹配。</strong>你是一个内向的人，在独处中获得能量，但是你做了一份每天要不断和陌生人沟通的工作。<br><strong>如果你在工作中感觉自己没有动力，做事提不起劲来，很可能是工作和你的动机不匹配。</strong>比如你的享受成就感，喜欢挑战，但是你的工作确是高度重复。</p>
-<h2 id="2、模型应用"><a href="#2、模型应用" class="headerlink" title="2、模型应用"></a>2、模型应用</h2><p>工作和伴侣是一样的，匹配比优秀更重要。所有的匹配要素里面，冰山底层的隐形要素起到了更大的作用。就像找伴侣一样，明明表面条件差不多，但是就是对一个人有感觉，对另一个人没感觉。这就是底层隐形要素在发挥作用。<br>但是，岗位这么多，我怎么去找，怎么知道自己匹配哪个岗位呢？</p>
-<h3 id="（1）确定要分析的岗位"><a href="#（1）确定要分析的岗位" class="headerlink" title="（1）确定要分析的岗位"></a>（1）确定要分析的岗位</h3><p>根据自身大致情况，先去领英这样的招聘网站，搜某个行业的某个岗位，会出来一堆人，<strong>你看看这些人的履历，他们后来都去了哪里，你就能知道潜在的方向了。</strong>也可以帮你判断这个行业岗位有没有前途。</p>
-<h3 id="（2）搜集岗位招聘要求"><a href="#（2）搜集岗位招聘要求" class="headerlink" title="（2）搜集岗位招聘要求"></a>（2）搜集岗位招聘要求</h3><p>不同公司对某个岗位的招聘要求可能不一样，把它们搜集起来，提取共性要求，尽可能的多看几份。</p>
-<h3 id="（3）分析这些需求"><a href="#（3）分析这些需求" class="headerlink" title="（3）分析这些需求"></a>（3）分析这些需求</h3><p>对照一下自己，<strong>如果是冰山底层因素不匹配，那么就不太建议选择这个职业。如果是只是技能方面不匹配，那么未必就不能选，这些都是可以后天获得的。</strong>冰山底层隐性因素是你优先考虑的，记住，它最重要。</p>
-<h1 id="二、四大要素，决定了你的市场价值"><a href="#二、四大要素，决定了你的市场价值" class="headerlink" title="二、四大要素，决定了你的市场价值"></a>二、四大要素，决定了你的市场价值</h1><p>首先得有一个认知，<strong>模型越往下的要素，越难培养、越难发现。相对也越能成为竞争优势。同时，下面的要素会影响上面的要素。</strong>例如一个人的知识储备多少，和他的学习能力有关。</p>
-<h2 id="1、四大要素时间投入"><a href="#1、四大要素时间投入" class="headerlink" title="1、四大要素时间投入"></a>1、四大要素时间投入</h2><p>实际表明，，<strong>多把时间投入到底层要素的培养是好的选择。</strong>能力和认知的提升是可以跨行业的，一旦积累到一定的高度，哪怕行业不行，换个地方一样可以值钱。</p>
-<h2 id="2、为什么大多数人不这样做"><a href="#2、为什么大多数人不这样做" class="headerlink" title="2、为什么大多数人不这样做"></a>2、为什么大多数人不这样做</h2><p>大多数人每天打开各种学习产品，学很多碎片化的知识，考各种几个月能拿下来的证。</p>
-<h3 id="（1）知识技能比较容易学"><a href="#（1）知识技能比较容易学" class="headerlink" title="（1）知识技能比较容易学"></a>（1）知识技能比较容易学</h3><p>它的门槛低，学习一个新知识，几乎是所有人都能做的。但能力不一样了，<strong>它需要持续的投入，可以的练习，</strong>人们倾向于做容易的事。</p>
-<h3 id="（2）受限于目前岗位的定位"><a href="#（2）受限于目前岗位的定位" class="headerlink" title="（2）受限于目前岗位的定位"></a>（2）受限于目前岗位的定位</h3><p>岗位的性质本身就是技能导向型的，对能力没有太高要求，只需要做一件事做得快就好，熟练就好。也就没有动力和意识去提高眼前不需要的、更有价值的能力了。</p>
-<h3 id="（3）没有看清工作的本质"><a href="#（3）没有看清工作的本质" class="headerlink" title="（3）没有看清工作的本质"></a>（3）没有看清工作的本质</h3><p>任何工作都是在解决问题，既然是解决一个问题，那么单有一个知识就没有用的。比如你会很多营销理论，但没法帮公司宣传和卖出更多的产品，你就是没有价值的。</p>
-<h1 id="三、四个迹象，发现你的隐藏能力"><a href="#三、四个迹象，发现你的隐藏能力" class="headerlink" title="三、四个迹象，发现你的隐藏能力"></a>三、四个迹象，发现你的隐藏能力</h1><p>努力就会有提升，但是很可能两个起点相同的人，最后努力了结果却不一样。原因很简单，就是努力的方向和天赋问题。<strong>成功人士基本上都是将自己的天赋发挥到了机制。每个人都有自己的天赋，找到它。</strong><br>如何发现自己的天赋所在呢？</p>
-<h2 id="1、自我效能（self-efficacy）"><a href="#1、自我效能（self-efficacy）" class="headerlink" title="1、自我效能（self-efficacy）"></a>1、自我效能（self-efficacy）</h2><p>它的意思是对于某件任务，<strong>你的自信心很强，觉得自己肯定能做好</strong>。当你对某类事情非常有信心，觉得自己能够成功，这就是天赋的一个表现。</p>
-<h2 id="2、本能（instinct）"><a href="#2、本能（instinct）" class="headerlink" title="2、本能（instinct）"></a>2、本能（instinct）</h2><p>意思是，当你还没开始做这件事的时候，你就已经迫不及待想要尝试了。<strong>那些让你迫不及待跃跃欲试的事情，可能就是你的天赋所在。</strong></p>
-<h2 id="3、成长（growth）"><a href="#3、成长（growth）" class="headerlink" title="3、成长（growth）"></a>3、成长（growth）</h2><p>意思是，你发现自己学的很快，相同时间带来更多的成长。<strong>在某个领域你一接触就明显比别人进步快</strong>，这也是天赋给你的信号。</p>
-<h2 id="4、满足（needs）"><a href="#4、满足（needs）" class="headerlink" title="4、满足（needs）"></a>4、满足（needs）</h2><p><strong>做完这件事，及时有些累，你依然感觉有满足感。</strong>这也是天赋的一个信号。<br>那么这些事情我怎么去发现它们呢？</p>
-<h2 id="1、问自己"><a href="#1、问自己" class="headerlink" title="1、问自己"></a>1、问自己</h2><h3 id="（1）关于自我能效"><a href="#（1）关于自我能效" class="headerlink" title="（1）关于自我能效"></a>（1）关于自我能效</h3><p>你认为,自己能够教别人什么?或者,别人常常向你请教什么?<br>你跟他人聊天的时候,倾向聊什么?<br>以及,聊什么话题你会更有自信?<br>你在做什么事情的时候,不会感到焦虑和担心?</p>
-<h3 id="（2）本能相关"><a href="#（2）本能相关" class="headerlink" title="（2）本能相关"></a>（2）本能相关</h3><p>你在做什么事情的时候,很少拖延?<br>长时间休假后,你最想念工作的哪个方面、哪个内容?<br>你宁愿放弃休息时间,也要做的事情,是什么?</p>
-<h3 id="（3）成长相关"><a href="#（3）成长相关" class="headerlink" title="（3）成长相关"></a>（3）成长相关</h3><p>有什么事情,让你沉浸其中忘记吃饭/睡觉?<br>你在做什么事情的时候,会暂时忘记刷社交网络?<br>你在做什么事情的时候,不容易感到疲倦和厌烦?</p>
-<h3 id="（4）满足相关"><a href="#（4）满足相关" class="headerlink" title="（4）满足相关"></a>（4）满足相关</h3><p>过去的工作和生活中,有什么让你获得巨大的成就感和满足感?</p>
-<h2 id="2、问他人"><a href="#2、问他人" class="headerlink" title="2、问他人"></a>2、问他人</h2><p>你觉得,我身上有什么不同于别人的特质?<br>你最欣赏或者佩服我的方面是什么?<br>在你看来,我做什么事情的时候,看起来最兴奋?<br>你曾经看到我做过哪件事情,让你印象深刻?<br>在以下这些方面,你觉得我哪些更加擅长?<br>思维方式:条理清晰、逻辑严密、脑洞很大、专注专业;<br>沟通协调:化解冲突、争取资源、知人善任;<br>计划执行:执行力强、追求完美、目标导向,等等。结果可能会让你有意外发现呢。</p>
+<h3 id="知识和技能"><a href="#知识和技能" class="headerlink" title="知识和技能"></a>知识和技能</h3><p>一个人的知识和技能（某项专门的技术）是可以通过后天习得的，也是非常显性，很容易看出来的。<br><strong>如果你的工作中有很多陌生的内容，觉得信息量巨大，来不及接受，感到焦虑和慌乱，那么很可能你的知识技能跟岗位不匹配</strong>，但这不是什么大问题，很容易补齐，努努力，一段时间就能提升。</p>
+<h3 id="能力"><a href="#能力" class="headerlink" title="能力"></a>能力</h3><p>能力，或者说通用能力，比如学习思考能力、人际交往能力等。<strong>知识和技能是属于特定领域，而能力则更多的是通用领域的，是可迁移的。</strong><br><strong>如果能力不匹配，在工作中就会体现为工作效率低，面对复杂问题无从下手，缺乏成就感，力不从心。</strong></p>
+<h3 id="价值观、性格、动机"><a href="#价值观、性格、动机" class="headerlink" title="价值观、性格、动机"></a>价值观、性格、动机</h3><p>这些要素在成年之后很难改变。<br><strong>如果你在工作中经常陷入矛盾和纠结，对所做的事情很难发自内内心地认同，很可能是价值观上不匹配。</strong><br><strong>如果你在工作中发现，自己好像没有很大的工作量，但是心很累，很有可能是性格不匹配。</strong>你是一个内向的人，在独处中获得能量，但是你做了一份每天要不断和陌生人沟通的工作。<br><strong>如果你在工作中感觉自己没有动力，做事提不起劲来，很可能是工作和你的动机不匹配。</strong>比如你的享受成就感，喜欢挑战，但是你的工作确是高度重复。</p>
+<h2 id="模型应用"><a href="#模型应用" class="headerlink" title="模型应用"></a>模型应用</h2><p>工作和伴侣是一样的，匹配比优秀更重要。所有的匹配要素里面，冰山底层的隐形要素起到了更大的作用。就像找伴侣一样，明明表面条件差不多，但是就是对一个人有感觉，对另一个人没感觉。这就是底层隐形要素在发挥作用。<br>但是，岗位这么多，我怎么去找，怎么知道自己匹配哪个岗位呢？</p>
+<h3 id="确定要分析的岗位"><a href="#确定要分析的岗位" class="headerlink" title="确定要分析的岗位"></a>确定要分析的岗位</h3><p>根据自身大致情况，先去领英这样的招聘网站，搜某个行业的某个岗位，会出来一堆人，<strong>你看看这些人的履历，他们后来都去了哪里，你就能知道潜在的方向了。</strong>也可以帮你判断这个行业岗位有没有前途。</p>
+<h3 id="搜集岗位招聘要求"><a href="#搜集岗位招聘要求" class="headerlink" title="搜集岗位招聘要求"></a>搜集岗位招聘要求</h3><p>不同公司对某个岗位的招聘要求可能不一样，把它们搜集起来，提取共性要求，尽可能的多看几份。</p>
+<h3 id="分析这些需求"><a href="#分析这些需求" class="headerlink" title="分析这些需求"></a>分析这些需求</h3><p>对照一下自己，<strong>如果是冰山底层因素不匹配，那么就不太建议选择这个职业。如果是只是技能方面不匹配，那么未必就不能选，这些都是可以后天获得的。</strong>冰山底层隐性因素是你优先考虑的，记住，它最重要。</p>
+<h1 id="四大要素，决定了你的市场价值"><a href="#四大要素，决定了你的市场价值" class="headerlink" title="四大要素，决定了你的市场价值"></a>四大要素，决定了你的市场价值</h1><p>首先得有一个认知，<strong>模型越往下的要素，越难培养、越难发现。相对也越能成为竞争优势。同时，下面的要素会影响上面的要素。</strong>例如一个人的知识储备多少，和他的学习能力有关。</p>
+<h2 id="四大要素时间投入"><a href="#四大要素时间投入" class="headerlink" title="四大要素时间投入"></a>四大要素时间投入</h2><p>实际表明，，<strong>多把时间投入到底层要素的培养是好的选择。</strong>能力和认知的提升是可以跨行业的，一旦积累到一定的高度，哪怕行业不行，换个地方一样可以值钱。</p>
+<h2 id="为什么大多数人不这样做"><a href="#为什么大多数人不这样做" class="headerlink" title="为什么大多数人不这样做"></a>为什么大多数人不这样做</h2><p>大多数人每天打开各种学习产品，学很多碎片化的知识，考各种几个月能拿下来的证。</p>
+<h3 id="知识技能比较容易学"><a href="#知识技能比较容易学" class="headerlink" title="知识技能比较容易学"></a>知识技能比较容易学</h3><p>它的门槛低，学习一个新知识，几乎是所有人都能做的。但能力不一样了，<strong>它需要持续的投入，可以的练习，</strong>人们倾向于做容易的事。</p>
+<h3 id="受限于目前岗位的定位"><a href="#受限于目前岗位的定位" class="headerlink" title="受限于目前岗位的定位"></a>受限于目前岗位的定位</h3><p>岗位的性质本身就是技能导向型的，对能力没有太高要求，只需要做一件事做得快就好，熟练就好。也就没有动力和意识去提高眼前不需要的、更有价值的能力了。</p>
+<h3 id="没有看清工作的本质"><a href="#没有看清工作的本质" class="headerlink" title="没有看清工作的本质"></a>没有看清工作的本质</h3><p>任何工作都是在解决问题，既然是解决一个问题，那么单有一个知识就没有用的。比如你会很多营销理论，但没法帮公司宣传和卖出更多的产品，你就是没有价值的。</p>
+<h1 id="四个迹象，发现你的隐藏能力"><a href="#四个迹象，发现你的隐藏能力" class="headerlink" title="四个迹象，发现你的隐藏能力"></a>四个迹象，发现你的隐藏能力</h1><p>努力就会有提升，但是很可能两个起点相同的人，最后努力了结果却不一样。原因很简单，就是努力的方向和天赋问题。<strong>成功人士基本上都是将自己的天赋发挥到了机制。每个人都有自己的天赋，找到它。</strong><br>如何发现自己的天赋所在呢？</p>
+<h2 id="自我效能（self-efficacy）"><a href="#自我效能（self-efficacy）" class="headerlink" title="自我效能（self-efficacy）"></a>自我效能（self-efficacy）</h2><p>它的意思是对于某件任务，<strong>你的自信心很强，觉得自己肯定能做好</strong>。当你对某类事情非常有信心，觉得自己能够成功，这就是天赋的一个表现。</p>
+<h2 id="本能（instinct）"><a href="#本能（instinct）" class="headerlink" title="本能（instinct）"></a>本能（instinct）</h2><p>意思是，当你还没开始做这件事的时候，你就已经迫不及待想要尝试了。<strong>那些让你迫不及待跃跃欲试的事情，可能就是你的天赋所在。</strong></p>
+<h2 id="成长（growth）"><a href="#成长（growth）" class="headerlink" title="成长（growth）"></a>成长（growth）</h2><p>意思是，你发现自己学的很快，相同时间带来更多的成长。<strong>在某个领域你一接触就明显比别人进步快</strong>，这也是天赋给你的信号。</p>
+<h2 id="满足（needs）"><a href="#满足（needs）" class="headerlink" title="满足（needs）"></a>满足（needs）</h2><p><strong>做完这件事，及时有些累，你依然感觉有满足感。</strong>这也是天赋的一个信号。<br>那么这些事情我怎么去发现它们呢？</p>
+<h2 id="问自己"><a href="#问自己" class="headerlink" title="问自己"></a>问自己</h2><h3 id="关于自我能效"><a href="#关于自我能效" class="headerlink" title="关于自我能效"></a>关于自我能效</h3><p>你认为,自己能够教别人什么?或者,别人常常向你请教什么?<br>你跟他人聊天的时候,倾向聊什么?<br>以及,聊什么话题你会更有自信?<br>你在做什么事情的时候,不会感到焦虑和担心?</p>
+<h3 id="本能相关"><a href="#本能相关" class="headerlink" title="本能相关"></a>本能相关</h3><p>你在做什么事情的时候,很少拖延?<br>长时间休假后,你最想念工作的哪个方面、哪个内容?<br>你宁愿放弃休息时间,也要做的事情,是什么?</p>
+<h3 id="成长相关"><a href="#成长相关" class="headerlink" title="成长相关"></a>成长相关</h3><p>有什么事情,让你沉浸其中忘记吃饭/睡觉?<br>你在做什么事情的时候,会暂时忘记刷社交网络?<br>你在做什么事情的时候,不容易感到疲倦和厌烦?</p>
+<h3 id="满足相关"><a href="#满足相关" class="headerlink" title="满足相关"></a>满足相关</h3><p>过去的工作和生活中,有什么让你获得巨大的成就感和满足感?</p>
+<h2 id="问他人"><a href="#问他人" class="headerlink" title="问他人"></a>问他人</h2><p>你觉得,我身上有什么不同于别人的特质?<br>你最欣赏或者佩服我的方面是什么?<br>在你看来,我做什么事情的时候,看起来最兴奋?<br>你曾经看到我做过哪件事情,让你印象深刻?<br>在以下这些方面,你觉得我哪些更加擅长?<br>思维方式:条理清晰、逻辑严密、脑洞很大、专注专业;<br>沟通协调:化解冲突、争取资源、知人善任;<br>计划执行:执行力强、追求完美、目标导向,等等。结果可能会让你有意外发现呢。</p>
 <p>问完这些，我相信你会明白很多，找到更正确的努力方向，让你的努力配上你的天赋而如虎添翼吧。</p>
-<h1 id="四、三个方法，将知识内化成能力"><a href="#四、三个方法，将知识内化成能力" class="headerlink" title="四、三个方法，将知识内化成能力"></a>四、三个方法，将知识内化成能力</h1><p>究竟该怎么做，才能将知识内化成能力呢？三个方法：掌握20%的核心，知识和问题相互依靠，系统化训练。（待续……后面补充如何训练与坚持）</p>
+<h1 id="三个方法，将知识内化成能力"><a href="#三个方法，将知识内化成能力" class="headerlink" title="三个方法，将知识内化成能力"></a>三个方法，将知识内化成能力</h1><p>究竟该怎么做，才能将知识内化成能力呢？三个方法：掌握20%的核心，知识和问题相互依靠，系统化训练。（待续……后面补充如何训练与坚持）</p>
 ]]></content>
       <categories>
         <category>人生</category>
