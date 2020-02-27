@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>发个牢骚</title>
+    <url>/changekuan.github.io/2020/02/27/%E5%8F%91%E7%82%B9%E5%B0%8F%E7%89%A2%E9%AA%9A/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\changekuan.github.io\assets\css\APlayer.min.css"><script src="\changekuan.github.io\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天是真的不愉快。<br>一切都要从一只蝙蝠开始说起……<br>我是真的没有料到假期会这么长，家里因为一些变故，变卖了房产，现在回到了偏远的老家，交通不方便也就算了，还没有网络。为了上课和写作业，我的手机流量已经无数次告急。面对毕业和找工作的压力，我属实有些手足无措。<br>河对面的哥哥家里有网，能解决我一大难题。每天早饭之后，我就去哥哥家上网。有时结束得早我就会回来，结束得晚，就会被拉住吃个午饭。哥哥和自己也是关系特别好。我就不明白了，吃个饭在爸妈眼里怎么就成了一件那么重要的事，天天还在上着课就催我回去吃饭，还不允许我留在那。我只是想节省时间而已。<br>今天直接把我骂的狗血淋头，说我天天不知道在忙些什么。<br>没有文化的人就是这样，总是在不了解情况，或者了解了情况也不理解你，说着一些逼逼莱莱的话。<br>我自从保研失败以来，到现在的愁毕业愁工作已经精神压力好大了。还要为了这些狗屁吃饭的事来头疼。我吃你妈b。<br>我活该好吧，我不学了好吧……</p>
+]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+      <tags>
+        <tag>不开心</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Effective C++ 学习笔记</title>
+    <url>/changekuan.github.io/2020/02/27/Effective-C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\changekuan.github.io\assets\css\APlayer.min.css"><script src="\changekuan.github.io\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="导读"><a href="#导读" class="headerlink" title="导读"></a>导读</h1><h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><h3 id="声明式"><a href="#声明式" class="headerlink" title="声明式"></a>声明式</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">int</span> x;<br><span class="hljs-function"><span class="hljs-built_in">std</span>::<span class="hljs-keyword">size_t</span> <span class="hljs-title">numDigits</span><span class="hljs-params">(<span class="hljs-keyword">int</span> number)</span></span>;<br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Widget</span>;</span><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;<br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GraphNode</span>;</span><br></code></pre></td></tr></table></figure>
+
+<p>1、即使对于 int x，我们也要习惯性称x为对象。<br>2、std：几乎是所有C++标准库元素的栖身地。平时使用程序库里的组件的时候都会略去前导std，养成习惯。<br>3、函数的声明式，其实是揭示其签名式对于</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-built_in">std</span>::<span class="hljs-keyword">size_t</span> <span class="hljs-title">numDigits</span><span class="hljs-params">(<span class="hljs-keyword">int</span> number)</span></span><br></code></pre></td></tr></table></figure>
+<p>对应签名式为std::size_t(int)</p>
+<h3 id="定义式"><a href="#定义式" class="headerlink" title="定义式"></a>定义式</h3><p>1、用explicit修饰的构造函数，可以阻止被用来隐式类型转换。<br>2、只有新对象生成时会调用构造函数</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp">Widget w2 = w1;<span class="hljs-comment">//用到的是拷贝构造函数</span><br>Widget w2;<span class="hljs-comment">//使用的是默认构造函数</span><br>w2 = w1;<span class="hljs-comment">//是赋值操作</span><br></code></pre></td></tr></table></figure>
+<p>3、尽可能避开不明确的行为</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">int</span> *p  = <span class="hljs-number">0</span>; <span class="hljs-comment">//p是null指针</span><br><span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; *p;<span class="hljs-comment">//对null取值，是不明确行为</span><br></code></pre></td></tr></table></figure>
+<p>4、C++概念里的接口：函数签名式，Class里可访问的元素</p>
+<h3 id="命名习惯"><a href="#命名习惯" class="headerlink" title="命名习惯"></a>命名习惯</h3><p>1、对于两个参数，一般可以lhs和rhs（左操作数，和右操作数）<br>2、示范时的class，不知道怎么命名，就Widget吧。<br>3、Widget * pw；//point to Widget</p>
+<h1 id="让自己习惯C"><a href="#让自己习惯C" class="headerlink" title="让自己习惯C++"></a>让自己习惯C++</h1><h2 id="视C-为一个语言联邦"><a href="#视C-为一个语言联邦" class="headerlink" title="视C++为一个语言联邦"></a>视C++为一个语言联邦</h2><p>C++ 的四个次语言：<strong>C,Object-Oriented C++，Template C++，STL</strong><br>1、C。没有模板，没有异常，没有重载。<br>2、Object-Oriented C++。面向对象，封装，继承，多态<br>3、Template C++。泛型编程。<br>4、STL。容器，算法，迭代器</p>
+<h2 id="用count，enum，inline来代替-define"><a href="#用count，enum，inline来代替-define" class="headerlink" title="用count，enum，inline来代替#define"></a>用count，enum，inline来代替#define</h2><p>使用#define是在预处理器中，使用它很有可能定义的名称未进入记号表而编译器不认识。<br>1、对于宏变量。推荐写成，例如：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">const</span> <span class="hljs-keyword">double</span> AspectRatio = <span class="hljs-number">1.653</span>;<span class="hljs-comment">//命名成大写开头的习惯，用于宏</span><br><span class="hljs-keyword">enum</span> &#123;NumTurns = <span class="hljs-number">5</span>&#125;；<span class="hljs-comment">//NumTurns成为5的一个记号，仅仅记号而已，它没有地址</span><br></code></pre></td></tr></table></figure>
+<p>2、对于宏函数。用inline代替</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;<br><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">callWithMax</span><span class="hljs-params">(<span class="hljs-keyword">const</span> T&amp; a,<span class="hljs-keyword">const</span> T&amp; b)</span></span>&#123; <span class="hljs-comment">//定义了一个callWithMax的宏函数</span><br>	f(a&gt;b?a:b);<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>所以就是尽量避免使用预处理器。</p>
+<h2 id="尽可能使用const"><a href="#尽可能使用const" class="headerlink" title="尽可能使用const"></a>尽可能使用const</h2><p>1、 </p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">char</span> greeting[] = <span class="hljs-string">"hello"</span>;<br><span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> * <span class="hljs-keyword">const</span> p = greeting; <span class="hljs-comment">//const pointer，const data。指针和指针指向的内容都是const类型的</span><br></code></pre></td></tr></table></figure>
+<p>有些东西就是不希望它后期被意外修改，那就把它变成const。<br>2、迭代器</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">const</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;::iterator i;<span class="hljs-comment">//pointer is const,value可动</span><br><span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;::const_iterator i;<span class="hljs-comment">//value is const,pointer可动</span><br></code></pre></td></tr></table></figure>
+<p>3、const型成员函数，不可以改变对象内任何非static成员变量，可用mutable来修饰非static成员变量的约束。</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>开启你活力新一天的建议</title>
     <url>/changekuan.github.io/2020/02/24/%E5%BC%80%E5%90%AF%E4%BD%A0%E6%B4%BB%E5%8A%9B%E6%96%B0%E4%B8%80%E5%A4%A9%E7%9A%84%E7%9D%A1%E7%9C%A0%E6%8A%80%E5%B7%A7/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\changekuan.github.io\assets\css\APlayer.min.css"><script src="\changekuan.github.io\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="我想快速激活自己"><a href="#我想快速激活自己" class="headerlink" title="我想快速激活自己"></a>我想快速激活自己</h1><p>早晨起床后，通常都昏昏沉沉一个小时左右，想要快速激活自己，怎么办？早上起不来，想要快速激活自己，怎么办？让我们听听张展晖老师的回答。<br>这个问题有个前提条件，就是睡眠是否充足。<strong>如果睡眠不足，那快速充满活力只能是透支自己的身体。如果睡眠足，我们可以通过调整激素水平来快速充满活力。</strong></p>
@@ -176,5 +221,11 @@
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\changekuan.github.io\assets\css\APlayer.min.css"><script src="\changekuan.github.io\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="它的出生日"><a href="#它的出生日" class="headerlink" title="它的出生日"></a>它的出生日</h1><p>今天是我第一次完成个人网页的搭建的日子，很兴奋。<br>其实好像也没有想象的那么难。<br>还有就是，斥巨资买了一年的 <a href="changekuan.top"></a> 的使用权，有钱真好</p>
 <h1 id="出现的问题"><a href="#出现的问题" class="headerlink" title="出现的问题"></a>出现的问题</h1><p>没想到配置文件里面，“空格”也很重要，一定不能漏掉，就因为我忘记打空格了，导致我找了一下午的问题所在。官方为啥不告诉我呢。</p>
 ]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+      <tags>
+        <tag>开心</tag>
+      </tags>
   </entry>
 </search>
