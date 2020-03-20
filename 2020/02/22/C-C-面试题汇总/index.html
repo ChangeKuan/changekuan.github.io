@@ -32,12 +32,15 @@
 <meta property="og:site_name" content="ChangeKuan&#39;s Blog">
 <meta property="og:description" content="C++面试中大概率会被问到的问题，主要是考察基础知识部分……">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://changekuan.top/2020/02/22/C-C-%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/attachments/1584696641518.table.html">
+<meta property="og:image" content="http://q61tkpb4n.bkt.clouddn.com/paixu.jpg">
 <meta property="article:published_time" content="2020-02-22T03:03:35.000Z">
-<meta property="article:modified_time" content="2020-02-23T13:49:31.517Z">
+<meta property="article:modified_time" content="2020-03-20T10:00:00.046Z">
 <meta property="article:author" content="ChangeKuan">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="面试">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://changekuan.top/2020/02/22/C-C-%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/attachments/1584696641518.table.html">
 
 <link rel="canonical" href="http://changekuan.top/2020/02/22/C-C-%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/">
 
@@ -277,14 +280,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3k</span>
+              <span>4.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>10 分钟</span>
+              <span>15 分钟</span>
             </span>
             <div class="post-description">C++面试中大概率会被问到的问题，主要是考察基础知识部分……</div>
 
@@ -298,18 +301,30 @@
 
       
         <h1 id="C和C-的区别"><a href="#C和C-的区别" class="headerlink" title="C和C++的区别"></a>C和C++的区别</h1><h2 id="C-是面向对象的语言"><a href="#C-是面向对象的语言" class="headerlink" title="C++是面向对象的语言"></a>C++是面向对象的语言</h2><p>构造一个符合问题的对象模型。最主要特点是“封装，继承，多态”，隐藏细节，拓展存在的模块，实现接口复用。</p>
+<h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><p>数据方法可信对象操作</p>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>对原来的类功能进行拓展。实现继承：直接使用父类的属性和方法；接口继承：只使用名称，其他的要自己实现 </p>
+<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><p>父类引用指向子类对象，重写实现多种状态。多态是具有表现多种形态的能力的特征，是为了避免在父类里大量重载引起代码臃肿且难于维护。<br>继承是子类使用父类的方法，而多态则是父类使用子类的方法</p>
+<h3 id="覆盖"><a href="#覆盖" class="headerlink" title="覆盖"></a>覆盖</h3><p>子类重新定义父类的虚函数</p>
+<h3 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h3><p>参数不一样</p>
 <h2 id="动态管理内存方法不一样"><a href="#动态管理内存方法不一样" class="headerlink" title="动态管理内存方法不一样"></a>动态管理内存方法不一样</h2><p>C使用malloc/free，C++还有new/delete。</p>
 <h2 id="另外"><a href="#另外" class="headerlink" title="另外"></a>另外</h2><p>C++支持重载，引用。</p>
 <p>选择C++的理由：C++更快（相较于java等），有像stl的类库（相较于C）</p>
 <p>关于C++输入输出：cin和cout比printf慢</p>
 <h1 id="面向对象和面向过程编程的区别"><a href="#面向对象和面向过程编程的区别" class="headerlink" title="面向对象和面向过程编程的区别"></a>面向对象和面向过程编程的区别</h1><p>面向过程：性能高，但是不好维护拓展<br>面向对象：反过来</p>
+<h1 id="虚函数和纯虚函数"><a href="#虚函数和纯虚函数" class="headerlink" title="虚函数和纯虚函数"></a>虚函数和纯虚函数</h1><p>类里如果声明了虚函数，这个函数是实现的，哪怕是空实现，它的作用就是为了能让这个函数在它的子类里面可以被覆盖（override），这样的话，编译器就可以使用后期绑定来达到多态了。<br>纯虚函数只是一个接口，是个函数的声明而已，它要留到子类里去实现。<br>虚函数在子类里面可以不重写；但纯虚函数必须在子类实现才可以实例化子类。<br>虚函数的类用于 “实作继承”，继承接口的同时也继承了父类的实现。纯虚函数关注的是接口的统一性，实现由子类完成。<br>带纯虚函数的类叫抽象类，这种类不能直接生成对象，而只有被继承，并重写其虚函数后，才能使用。抽象类被继承后，子类可以继续是抽象类，也可以是普通类。<br>虚基类是虚继承中的基类，具体见下文虚继承。</p>
+<h1 id="const的作用"><a href="#const的作用" class="headerlink" title="const的作用"></a>const的作用</h1><p>修饰变量：说明该变量不可以被改变；<br>修饰指针：分为指向常量的指针（pointer to const）和自身是常量的指针（常量指针，const pointer）；<br>修饰引用：指向常量的引用（reference to const），用于形参类型，即避免了拷贝，又避免了函数对值的修改；<br>修饰成员函数：说明该成员函数内不能修改成员变量。</p>
 <h1 id="文件编译执行的四个阶段"><a href="#文件编译执行的四个阶段" class="headerlink" title="文件编译执行的四个阶段"></a>文件编译执行的四个阶段</h1><p>预处理（），编译（汇编代码），汇编（机器指令），链接（exe）</p>
 <h1 id="变量的声明和定义"><a href="#变量的声明和定义" class="headerlink" title="变量的声明和定义"></a>变量的声明和定义</h1><p>声明：只是先告诉有这个东西，但是不分配内存</p>
 <h1 id="指针引用区别"><a href="#指针引用区别" class="headerlink" title="指针引用区别"></a>指针引用区别</h1><p>指针是一个存储另一个变量地址的新变量。<br>引用只是一个别名。引用必须在初始化的时候被赋值，不能为NULL。</p>
-<h1 id="static关键字的作用"><a href="#static关键字的作用" class="headerlink" title="static关键字的作用"></a>static关键字的作用</h1><p>修饰局部变量：使得变量变成静态变量，生命周期与程序相同。<br>修饰全局变量：使得只能被包含该定义的文件访问。<br>修饰函数：使得只能被包含该定义的文件访问。<br>修饰成员变量：会被类的所有对象共享。<br><strong>涉及到静态就往共享方面去想</strong></p>
+<h1 id="static关键字的作用"><a href="#static关键字的作用" class="headerlink" title="static关键字的作用"></a>static关键字的作用</h1><p>修饰局部变量：使得变量变成静态变量，生命周期与程序相同。<br>修饰全局变量：表明函数的作用范围，仅在定义该函数的文件内才能使用。。<br>修饰函数：表明函数的作用范围，仅在定义该函数的文件内才能使用。<br>修饰成员变量：会被类的所有对象共享，而且不需要生成对象就可以访问该成员<br>修饰成员函数：修饰成员函数使得不需要生成对象就可以访问该函数，但是在 static 函数内不能访问非静态成员。<br><strong>涉及到静态就往共享方面去想</strong></p>
+<h1 id="struct和class"><a href="#struct和class" class="headerlink" title="struct和class"></a>struct和class</h1><p>struct 更适合看成是一个数据结构的实现体，class 更适合看成是一个对象的实现体</p>
 <h1 id="define和const的区别"><a href="#define和const的区别" class="headerlink" title="#define和const的区别"></a>#define和const的区别</h1><p>定义常量的时候：#define 只是一个立即数，没有类型<br>#define 不能用指针去指向它<br>#define 还可以用来定义简单的函数</p>
-<h1 id="malloc和new的区别"><a href="#malloc和new的区别" class="headerlink" title="malloc和new的区别"></a>malloc和new的区别</h1><p>Malloc（配套free）是库函数，它的完整作用只对内部类型数据有用。对于非内部类型对象来说，创建的时候自动执行构造函数，消亡的时候自动执行析构函数。<br>New 是运算符，完成内存分配和初始化的工作。</p>
+<h1 id="malloc和new的区别"><a href="#malloc和new的区别" class="headerlink" title="malloc和new的区别"></a>malloc和new的区别</h1><p>malloc、free用于分配、释放内存<br>new动态分配（自由存储区），失败抛出异常，编译器自动算大小。delete。使用构造函数和析构函数。出现内存泄漏的时候能知道具体在哪<br>malloc（堆上分配），失败返回null，要指定具体大小。free。返回 * void，需要强行类型转换</p>
+<h2 id="new、delete和malloc对比："><a href="#new、delete和malloc对比：" class="headerlink" title="new、delete和malloc对比："></a>new、delete和malloc对比：</h2><p>new / new[]：完成两件事，先底层调用 malloc 分配了内存，然后调用构造函数（创建对象）。<br>delete/delete[]：也完成两件事，先调用析构函数（清理资源），然后底层调用 free 释放空间。<br>new 在申请内存时会自动计算所需字节数，而 malloc 则需我们自己输入申请内存空间的字节数</p>
+<h2 id="delete-this-合法吗？"><a href="#delete-this-合法吗？" class="headerlink" title="delete this 合法吗？"></a>delete this 合法吗？</h2><p>合法，但：<br>必须保证 this 对象是通过 new（不是 new[]、不是 placement new、不是栈上、不是全局、不是其他对象成员）分配的<br>必须保证调用 delete this 的成员函数是最后一个调用 this 的成员函数<br>必须保证成员函数的 delete this 后面没有调用 this 了<br>必须保证 delete this 后没有人使用了</p>
+<p><img src="./attachments/1584696641518.table.html" alt="表格"></p>
 <h1 id="共同体"><a href="#共同体" class="headerlink" title="共同体"></a>共同体</h1><p>意思就是一群人共用一段内存，但不同时存在</p>
+<h1 id="friend-友元类和友元函数"><a href="#friend-友元类和友元函数" class="headerlink" title="friend 友元类和友元函数"></a>friend 友元类和友元函数</h1><p>能访问私有成员<br>破坏封装性<br>友元关系不可传递<br>友元关系的单向性<br>友元声明的形式及数量不受限制</p>
 <h1 id="delete和delete-的区别"><a href="#delete和delete-的区别" class="headerlink" title="delete和delete[]的区别"></a>delete和delete[]的区别</h1><p>delete只会调用一次析构函数，而delete[]会调用每个成员的析构函数<br>用new分配的内存用delete释放，用new[]分配的内存用delete[]释放</p>
 <h1 id="堆和栈的区别"><a href="#堆和栈的区别" class="headerlink" title="堆和栈的区别"></a>堆和栈的区别</h1><p>一个由C/C++编译的程序占用的内存分为以下几个部分</p>
 <h2 id="栈区（stack）"><a href="#栈区（stack）" class="headerlink" title="栈区（stack）"></a>栈区（stack）</h2><p>由编译器自动分配释放 ，存放函数的参数值，局部变量的值等。其操作方式类似于数据结构中的栈。</p>
@@ -328,6 +343,8 @@
 <p>}<br>    Int length =<br>M_data = new char [l+1]</p>
 <p>Strcpy();<br>}</p>
 <h1 id="结构体和类"><a href="#结构体和类" class="headerlink" title="结构体和类"></a>结构体和类</h1><p>结构体默认public，类默认private</p>
+<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><p><img src="http://q61tkpb4n.bkt.clouddn.com/paixu.jpg" alt="排序算法时间复杂度"></p>
+<p>插入排序：摸牌的思想<br>堆排序：先生成大（小）顶堆，然后去除根节点。依次从最后的叶节点补充到根节点，调整树结构<br>归并：季后赛模式<br>快速排序：标定点，递归交换<br>基数排序：个位，十位，百位……<br>计数排序：找到边界值，然后中间的值进行计数，分类摆放，最后全部取出<br>冒泡排序：两两比较<br>桶排序：根据边界值定范围，定桶数，每个桶装了不一样范围的数<br>希尔排序：一半步长，四分之一……</p>
 <h1 id="STL（必问）"><a href="#STL（必问）" class="headerlink" title="STL（必问）"></a>STL（必问）</h1><p>STL标准模板库，是一些容器的集合。容器、算法、迭代器</p>
 <h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><p>序列式容器：vector，list，queue，stack，heap<br>关联式容器：平衡二叉树。Map，set，hashtable，hash_set</p>
 <h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p>排序，复制，各容器的算法。</p>
@@ -347,8 +364,7 @@
 <p><strong>vector数组</strong><br>Vecor&lt; int &gt; v{4，6};//4大小的数组，初始为6<br>For(auto x:v)cout&lt;&lt;x;<br>v.at(2);<br>v.push_back(6);追加内容<br>resize（10） 重置大小，不赋值，默认为0<br>erase（v.begin）<br>v.front() 第一个元素<br>back（）和end（）-1 是一样的 ，最后一个<br>sort(v.begin(),v.end(),greater&lt; int &gt;()) 从大到小，less从小到大。默认值从小到大<br>for(vector&lt; int &gt;::iterator it = v.begin();it!=v.end();it++)</p>
 <p><strong>stack:</strong><br>stack<int> s;<br>s.push(2);<br>s.pop();<br>s.top();<br>10进制转2进制，逆序单词，</p>
 <p>Stringstream ss;<br>Ss&lt;&lt;str;流入<br>ss&gt;&gt;num;流出</p>
-<p><strong>map：映射。树结构</strong><br>unordered_map</p>
-<p>map&lt;标签，值&gt; m；有序的树结构</p>
+<p>map：映射。树结构<br>unordered_map<br>map&lt;标签，值&gt; m；有序的树结构</p>
 
     </div>
 
@@ -435,7 +451,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C和C-的区别"><span class="nav-text">C和C++的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#C-是面向对象的语言"><span class="nav-text">C++是面向对象的语言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态管理内存方法不一样"><span class="nav-text">动态管理内存方法不一样</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#另外"><span class="nav-text">另外</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象和面向过程编程的区别"><span class="nav-text">面向对象和面向过程编程的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件编译执行的四个阶段"><span class="nav-text">文件编译执行的四个阶段</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变量的声明和定义"><span class="nav-text">变量的声明和定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#指针引用区别"><span class="nav-text">指针引用区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#static关键字的作用"><span class="nav-text">static关键字的作用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#define和const的区别"><span class="nav-text">#define和const的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#malloc和new的区别"><span class="nav-text">malloc和new的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#共同体"><span class="nav-text">共同体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#delete和delete-的区别"><span class="nav-text">delete和delete[]的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#堆和栈的区别"><span class="nav-text">堆和栈的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#栈区（stack）"><span class="nav-text">栈区（stack）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆区（heap）"><span class="nav-text">堆区（heap）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全局区（静态区、static）"><span class="nav-text">全局区（静态区、static）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文字常量区"><span class="nav-text">文字常量区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程序代码区"><span class="nav-text">程序代码区</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于内存对齐"><span class="nav-text">关于内存对齐</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内存泄漏的原因"><span class="nav-text">内存泄漏的原因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#拷贝构造函数"><span class="nav-text">拷贝构造函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#构造函数"><span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#虚函数"><span class="nav-text">虚函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#静态类型和动态类型"><span class="nav-text">静态类型和动态类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#请你写一个string类"><span class="nav-text">请你写一个string类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结构体和类"><span class="nav-text">结构体和类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#STL（必问）"><span class="nav-text">STL（必问）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#容器"><span class="nav-text">容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法"><span class="nav-text">算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#迭代器"><span class="nav-text">迭代器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vector原理"><span class="nav-text">vector原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#unordered-map和map的区别"><span class="nav-text">unordered_map和map的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#list"><span class="nav-text">list</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#map和set-的底层原理"><span class="nav-text">map和set 的底层原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#STL的原理和使用"><span class="nav-text">STL的原理和使用</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C和C-的区别"><span class="nav-text">C和C++的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#C-是面向对象的语言"><span class="nav-text">C++是面向对象的语言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#封装"><span class="nav-text">封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承"><span class="nav-text">继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多态"><span class="nav-text">多态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#覆盖"><span class="nav-text">覆盖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重载"><span class="nav-text">重载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态管理内存方法不一样"><span class="nav-text">动态管理内存方法不一样</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#另外"><span class="nav-text">另外</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象和面向过程编程的区别"><span class="nav-text">面向对象和面向过程编程的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#虚函数和纯虚函数"><span class="nav-text">虚函数和纯虚函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#const的作用"><span class="nav-text">const的作用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件编译执行的四个阶段"><span class="nav-text">文件编译执行的四个阶段</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变量的声明和定义"><span class="nav-text">变量的声明和定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#指针引用区别"><span class="nav-text">指针引用区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#static关键字的作用"><span class="nav-text">static关键字的作用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#struct和class"><span class="nav-text">struct和class</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#define和const的区别"><span class="nav-text">#define和const的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#malloc和new的区别"><span class="nav-text">malloc和new的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#new、delete和malloc对比："><span class="nav-text">new、delete和malloc对比：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#delete-this-合法吗？"><span class="nav-text">delete this 合法吗？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#共同体"><span class="nav-text">共同体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#friend-友元类和友元函数"><span class="nav-text">friend 友元类和友元函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#delete和delete-的区别"><span class="nav-text">delete和delete[]的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#堆和栈的区别"><span class="nav-text">堆和栈的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#栈区（stack）"><span class="nav-text">栈区（stack）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆区（heap）"><span class="nav-text">堆区（heap）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全局区（静态区、static）"><span class="nav-text">全局区（静态区、static）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文字常量区"><span class="nav-text">文字常量区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程序代码区"><span class="nav-text">程序代码区</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于内存对齐"><span class="nav-text">关于内存对齐</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内存泄漏的原因"><span class="nav-text">内存泄漏的原因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#拷贝构造函数"><span class="nav-text">拷贝构造函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#构造函数"><span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#虚函数"><span class="nav-text">虚函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#静态类型和动态类型"><span class="nav-text">静态类型和动态类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#请你写一个string类"><span class="nav-text">请你写一个string类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结构体和类"><span class="nav-text">结构体和类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#排序"><span class="nav-text">排序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#STL（必问）"><span class="nav-text">STL（必问）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#容器"><span class="nav-text">容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法"><span class="nav-text">算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#迭代器"><span class="nav-text">迭代器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vector原理"><span class="nav-text">vector原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#unordered-map和map的区别"><span class="nav-text">unordered_map和map的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#list"><span class="nav-text">list</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#map和set-的底层原理"><span class="nav-text">map和set 的底层原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#STL的原理和使用"><span class="nav-text">STL的原理和使用</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -517,13 +533,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">34k</span>
+    <span title="站点总字数">35k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:53</span>
+    <span title="站点阅读时长">1:58</span>
 </div>
 
 <span id="sitetime"></span>
